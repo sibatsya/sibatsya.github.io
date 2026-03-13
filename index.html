@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#05080f"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Sibatsya Sahoo"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="description" content="Sibatsya Sahoo - SAP ABAP Consultant with 4+ years experience in S/4HANA, RAP, OData, CDS Views, SAP BTP."/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Sibatsya Sahoo — SAP ABAP Consultant"/>
+<meta property="og:description" content="4+ years of experience in S/4HANA, RAP, OData, CDS Views, and SAP BTP. Building scalable enterprise automation solutions."/>
+<meta property="og:url" content="https://sibatsyasahoo.com"/>
+<meta property="og:image" content="https://sibatsyasahoo.com/og-preview.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sibatsya Sahoo — SAP ABAP Consultant"/>
+<meta name="twitter:description" content="4+ years of experience in S/4HANA, RAP, OData, CDS Views, and SAP BTP."/>
+<title>Sibatsya Sahoo - SAP ABAP Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#05080f;--ink:#e8eeff;--muted:#7a88aa;--muted2:#3d4860;
+  --indigo:#38bdf8;--violet:#818cf8;--gold:#fbbf24;
+  --border:rgba(56,189,248,0.15);--border2:rgba(56,189,248,0.07);
+  --font:'DM Sans',system-ui,sans-serif;--font-display:'Geist','DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);overflow-x:hidden}
+.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.15;animation:bf 16s ease-in-out infinite}
+.b1{width:min(900px,140vw);height:min(900px,140vw);background:radial-gradient(#0ea5e9,#1d4ed8);top:-30%;left:-25%}
+.b2{width:min(700px,120vw);height:min(700px,120vw);background:radial-gradient(#06b6d4,#7c3aed);top:35%;right:-20%;animation-delay:-6s}
+.b3{width:min(600px,100vw);height:min(600px,100vw);background:radial-gradient(#fbbf24,#0ea5e9);bottom:-20%;left:15%;animation-delay:-12s;opacity:.08}
+@keyframes bf{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(5,8,15,.95);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:.95rem;font-weight:700;color:var(--ink);background:none;border:none;cursor:pointer;font-family:var(--font-display);letter-spacing:-.02em;-webkit-tap-highlight-color:transparent}
+.nav-logo span{background:linear-gradient(135deg,#0ea5e9,var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:.1rem;list-style:none}
+.nbtn{font-family:var(--font);font-size:.78rem;font-weight:500;color:var(--muted);background:none;border:none;padding:.38rem .75rem;border-radius:7px;transition:all .2s;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nbtn:hover{color:var(--ink);background:rgba(56,189,248,.1)}
+.ncourse{color:var(--gold)!important;font-weight:700!important}
+.ncta{background:linear-gradient(135deg,#0ea5e9,var(--violet))!important;color:#fff!important;font-weight:600!important;border-radius:8px!important}
+.ncta:hover{opacity:.88!important}
+.nbtn.active{color:var(--ink);background:rgba(56,189,248,.1)}
+.hamburger{
+  display:none;align-items:center;justify-content:center;
+  width:36px;height:36px;
+  background:rgba(56,189,248,.08);
+  border:1px solid rgba(56,189,248,.2);
+  border-radius:10px;cursor:pointer;
+  padding:0;flex-direction:column;gap:4px;
+  transition:background .2s,border-color .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.hamburger:hover{background:rgba(56,189,248,.15);border-color:rgba(56,189,248,.4)}
+.hamburger span{display:block;width:14px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .28s cubic-bezier(.4,0,.2,1),opacity .2s,width .28s}
+.hamburger span:nth-child(3){width:10px;align-self:flex-start;margin-left:11px}
+.hamburger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg);width:14px}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);width:14px;margin-left:11px}
+.nav-drawer{
+  position:fixed;top:68px;right:1rem;left:auto;z-index:190;
+  width:200px;
+  background:rgba(5,8,15,.97);
+  -webkit-backdrop-filter:blur(28px);backdrop-filter:blur(28px);
+  border:1px solid rgba(56,189,248,.18);
+  border-radius:16px;
+  padding:0;
+  max-height:0;overflow:hidden;
+  transform:translateY(-6px);opacity:0;
+  transition:max-height .32s cubic-bezier(.4,0,.2,1),padding .32s cubic-bezier(.4,0,.2,1),opacity .22s ease,transform .22s ease;
+  display:block;
+  box-shadow:0 16px 48px rgba(0,0,0,.6),0 0 0 0.5px rgba(56,189,248,.1);
+}
+.nav-drawer.open{max-height:420px;padding:.45rem;opacity:1;transform:translateY(0)}
+.nav-drawer .nbtn{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:.83rem;font-weight:500;
+  padding:.6rem .85rem;
+  border-radius:10px;width:100%;
+  color:var(--muted);min-height:40px;
+  background:none;border:none;
+  transition:color .15s,background .15s;
+}
+.nav-drawer .nbtn:hover{color:var(--ink);background:rgba(56,189,248,.08)}
+.nav-drawer .nbtn::after{content:'›';color:rgba(56,189,248,.35);font-size:1.1rem;line-height:1;transition:transform .15s,color .15s}
+.nav-drawer .nbtn:hover::after{transform:translateX(2px);color:var(--indigo)}
+.nav-drawer .nbtn.ncourse{color:var(--gold)!important;font-weight:600!important}
+.nav-drawer .nbtn.ncta{background:linear-gradient(135deg,rgba(14,165,233,.12),rgba(129,140,248,.12))!important;color:var(--ink)!important;font-weight:600!important;border:1px solid rgba(56,189,248,.2)!important;border-radius:10px!important;margin-top:.25rem;justify-content:center}
+.hero{min-height:100vh;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem}
+.hero-title{font-size:clamp(2.6rem,5.5vw,5rem);font-weight:800;font-family:var(--font-display);letter-spacing:-.05em;line-height:1.08;margin-bottom:1.4rem;opacity:0;animation:fu .7s .2s ease forwards}
+.grad{background:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 60%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(.9rem,2vw,1.1rem);color:var(--muted);max-width:600px;line-height:1.85;margin-bottom:2.5rem;opacity:0;animation:fu .7s .35s ease forwards}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;opacity:0;animation:fu .7s .5s ease forwards}
+.btn-p{background:linear-gradient(135deg,#0ea5e9,var(--violet));color:#fff;border:none;padding:.82rem 1.9rem;border-radius:12px;font-family:var(--font);font-size:.88rem;font-weight:700;cursor:pointer;box-shadow:0 4px 24px rgba(14,165,233,.35);transition:all .25s;-webkit-tap-highlight-color:transparent}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(14,165,233,.5)}
+.btn-s{background:rgba(56,189,248,.05);color:var(--ink);border:1px solid var(--border);padding:.82rem 1.9rem;border-radius:12px;font-family:var(--font);font-size:.88rem;font-weight:600;cursor:pointer;transition:all .25s;-webkit-tap-highlight-color:transparent}
+.btn-s:hover{transform:translateY(-2px);background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.4)}
+.stats{display:inline-flex;flex-wrap:nowrap;background:rgba(56,189,248,.04);border:1px solid var(--border);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-radius:16px;overflow:visible;box-shadow:0 8px 40px rgba(0,0,0,.5);opacity:0;animation:fu .7s .65s ease forwards}
+.stat{padding:1.3rem 1.8rem;text-align:center;border-right:1px solid var(--border);flex:0 0 auto}
+.stat:last-child{border-right:none}
+.snum{font-size:1.3rem;font-weight:800;font-family:var(--font-display);letter-spacing:-.03em;background:linear-gradient(135deg,var(--indigo),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;display:block}
+.slbl{font-size:.67rem;color:var(--muted);font-weight:500;margin-top:.2rem;white-space:nowrap;display:block}
+.sec{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:5.5rem 2rem}
+.stag{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;color:var(--indigo);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem}
+.stag::before{content:'';width:16px;height:2px;background:linear-gradient(90deg,var(--indigo),var(--gold));border-radius:2px}
+.stitle{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;font-family:var(--font-display);letter-spacing:-.04em;margin-bottom:.9rem}
+.ssub{color:var(--muted);font-size:.95rem;line-height:1.75;max-width:540px;margin-bottom:2.8rem}
+.card{background:rgba(14,165,233,.03);border:1px solid var(--border);border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(14,165,233,.12);border-color:rgba(56,189,248,.35)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.acard{padding:2.4rem}
+.acard p{color:var(--muted);line-height:1.85;font-size:.93rem;margin-bottom:.9rem}
+.acard p strong{color:var(--ink);font-weight:600}
+.adetails{border-radius:20px;overflow:hidden;border:1px solid var(--border)}
+.drow{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.4rem;border-bottom:1px solid var(--border2);background:rgba(14,165,233,.03)}
+.drow:last-child{border-bottom:none}
+.drow:hover{background:rgba(56,189,248,.05)}
+.dk{font-size:.73rem;font-weight:500;color:var(--muted2)}
+.dv{font-size:.84rem;font-weight:600;color:var(--ink);text-align:right}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.scard{padding:1.7rem;border-radius:20px}
+.sicon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1rem;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2)}
+.sctitle{font-size:.92rem;font-weight:700;margin-bottom:.75rem;color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:.32rem}
+.tag{font-size:.66rem;font-weight:500;padding:.24rem .58rem;border-radius:6px;background:rgba(56,189,248,.07);color:var(--indigo);border:1px solid rgba(56,189,248,.2)}
+.elist{display:flex;flex-direction:column;gap:1.1rem}
+.ecard{padding:2rem 2.3rem;border-radius:20px}
+.ehdr{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.2rem;flex-wrap:wrap}
+.eperiod{font-size:.72rem;font-weight:700;color:var(--indigo);background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.2);padding:.26rem .75rem;border-radius:100px;white-space:nowrap}
+.etitle{font-size:1.08rem;font-weight:700;font-family:var(--font-display);letter-spacing:-.02em;color:var(--ink)}
+.eco{font-size:.79rem;font-weight:500;color:var(--muted);margin-bottom:.85rem;margin-top:.12rem}
+.ebullets{list-style:none;margin-bottom:.85rem;display:flex;flex-direction:column;gap:.42rem}
+.ebullets li{font-size:.84rem;color:var(--muted);line-height:1.7;padding-left:1.15rem;position:relative}
+.ebullets li::before{content:'>';position:absolute;left:0;color:var(--indigo);font-size:.72rem;top:.05rem}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.pcard{padding:1.7rem;border-radius:20px;display:flex;flex-direction:column;gap:.75rem}
+.pnum{font-size:.67rem;font-weight:700;color:var(--indigo);letter-spacing:.1em}
+.ptitle{font-size:.97rem;font-weight:700;font-family:var(--font-display);letter-spacing:-.02em;color:var(--ink);line-height:1.3}
+.pdesc{font-size:.82rem;color:var(--muted);line-height:1.7;flex:1}
+.parrow{display:none}
+.pnum{font-size:.67rem;font-weight:700;color:var(--indigo);letter-spacing:.1em}
+.ptitle{font-size:.97rem;font-weight:700;font-family:var(--font-display);letter-spacing:-.02em;color:var(--ink);line-height:1.3}
+.pdesc{font-size:.82rem;color:var(--muted);line-height:1.7;flex:1}
+.parrow{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#0ea5e9,var(--violet));color:#fff;font-size:.9rem;transition:transform .2s;align-self:flex-start}
+.pcard:hover .parrow{transform:translateX(3px)}
+.course-wrap{background:rgba(14,165,233,.04);border:1px solid rgba(56,189,248,.18);border-radius:24px;padding:3rem;margin-bottom:2rem}
+.course-top{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start;margin-bottom:2.5rem}
+.course-badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#0ea5e9,var(--violet));color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .85rem;border-radius:100px;margin-bottom:1.1rem}
+.course-title-text{font-size:clamp(1.5rem,2.8vw,2rem);font-weight:800;letter-spacing:-.03em;line-height:1.25;margin-bottom:.9rem;color:var(--ink)}
+.course-desc{color:var(--muted);font-size:.9rem;line-height:1.8;margin-bottom:1.5rem}
+.course-highlights{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:1.75rem}
+.ch{display:flex;align-items:flex-start;gap:.55rem;font-size:.82rem;color:var(--muted);line-height:1.45}
+.ch strong{color:var(--ink)}
+.ch-tick{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,#0ea5e9,var(--violet));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.55rem;font-weight:900;flex-shrink:0;margin-top:.05rem}
+.cstats{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.cstat{text-align:center;background:rgba(56,189,248,.05);border:1px solid var(--border);border-radius:12px;padding:.75rem 1.1rem;flex:1;min-width:70px}
+.csnum{font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#0ea5e9,var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cslbl{font-size:.62rem;color:var(--muted);margin-top:.1rem}
+.cc{background:rgba(14,165,233,.04);border:1px solid var(--border);border-radius:20px;padding:1.75rem;box-shadow:0 12px 48px rgba(0,0,0,.5);position:relative}
+.cc-ribbon{position:absolute;top:-12px;right:20px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-size:.66rem;font-weight:800;padding:.28rem .8rem;border-radius:100px;letter-spacing:.06em}
+.cc-header{display:flex;align-items:center;gap:.7rem;margin-bottom:1.3rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.cc-avatar{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,#0ea5e9,var(--violet));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.95rem;flex-shrink:0}
+.cc-name{font-weight:700;font-size:.88rem;color:var(--ink)}
+.cc-role{font-size:.71rem;color:var(--muted)}
+.cc-mods{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.2rem}
+.cc-mod{display:flex;align-items:center;gap:.6rem;padding:.55rem .7rem;border-radius:8px;background:rgba(56,189,248,.05);font-size:.76rem;font-weight:500;color:var(--ink)}
+.cc-mod-icon{font-size:.88rem;flex-shrink:0}
+.cc-mod-label{flex:1}
+.cc-mod-bar{width:60px;height:3.5px;background:rgba(56,189,248,.12);border-radius:2px;overflow:hidden;flex-shrink:0}
+.cc-mod-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#0ea5e9,var(--violet))}
+.cc-footer{display:flex;justify-content:space-around;padding-top:.9rem;border-top:1px solid var(--border)}
+.ccf-stat{text-align:center}
+.ccf-num{font-size:1rem;font-weight:800;background:linear-gradient(135deg,#0ea5e9,var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ccf-lbl{font-size:.62rem;color:var(--muted);margin-top:.08rem}
+.curriculum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:1.5rem}
+.cur-card{background:rgba(14,165,233,.03);border:1px solid var(--border2);border-radius:12px;padding:1rem 1.1rem;transition:all .2s}
+.cur-card:hover{border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.05);transform:translateY(-2px)}
+.cur-num{font-size:.64rem;font-weight:700;color:var(--gold);letter-spacing:.08em;margin-bottom:.3rem}
+.cur-title{font-size:.8rem;font-weight:600;color:var(--ink);line-height:1.35}
+.faq-list{display:flex;flex-direction:column;gap:.65rem}
+.faq-item{background:rgba(14,165,233,.03);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.3rem;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--ink);user-select:none;gap:.5rem;min-height:44px;-webkit-tap-highlight-color:transparent}
+.faq-q:hover{background:rgba(56,189,248,.05)}
+.faq-icon{color:var(--indigo);font-size:1.1rem;transition:transform .3s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;font-size:.83rem;color:var(--muted);line-height:1.75;padding:0 1.3rem}
+.faq-item.open .faq-a{max-height:200px;padding:.05rem 1.3rem 1rem}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.cinfo{padding:2.4rem;border-radius:24px}
+.cinfo h3{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.65rem;color:var(--ink)}
+.cinfo p{color:var(--muted);line-height:1.75;margin-bottom:1.6rem;font-size:.91rem}
+.clink{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.15rem;border-radius:12px;border:1px solid var(--border);background:rgba(14,165,233,.03);color:var(--ink);font-size:.84rem;font-weight:500;margin-bottom:.65rem;transition:all .2s;text-decoration:none;min-height:44px;-webkit-tap-highlight-color:transparent}
+.clink:hover{border-color:rgba(56,189,248,.35);background:rgba(56,189,248,.07);transform:translateX(3px)}
+.cico{width:33px;height:33px;border-radius:8px;background:linear-gradient(135deg,#0ea5e9,var(--violet));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;flex-shrink:0}
+.carr{margin-left:auto;color:var(--muted2);font-size:.85rem}
+.toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;padding:.95rem 1.4rem;border-radius:12px;font-size:.85rem;font-weight:600;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.5);transform:translateY(80px);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);pointer-events:none;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(5,8,15,.95)}
+.fn{font-size:.84rem;font-weight:600;color:var(--ink)}
+.fc{font-size:.72rem;color:var(--muted)}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rv{animation:fadeUp .5s ease both}
+.d1{animation-delay:.07s}.d2{animation-delay:.14s}.d3{animation-delay:.21s}
+@media(max-width:960px){
+  nav{padding:0 1.25rem;height:60px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-drawer{top:60px}
+  .hero{padding:7rem 1.5rem 4rem}
+  .about-grid,.cwrap{grid-template-columns:1fr}
+  .sgrid,.pgrid{grid-template-columns:1fr 1fr}
+  .curriculum-grid{grid-template-columns:repeat(2,1fr)}
+  .course-top{grid-template-columns:1fr}
+  .course-highlights{grid-template-columns:1fr 1fr}
+  .course-wrap{padding:2rem 1.5rem}
+  .stats{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:400px;border-radius:14px;overflow:hidden}
+  .stat{border-right:none;border-bottom:1px solid var(--border);padding:1.1rem 1rem}
+  .stat:nth-child(odd){border-right:1px solid var(--border)}
+  .stat:nth-last-child(-n+2){border-bottom:none}
+  .sec{padding:4rem 1.5rem}
+  footer{flex-direction:column;gap:.5rem;text-align:center;padding:1.25rem}
+}
+@media(max-width:600px){
+  nav{height:56px;padding:0 1rem}
+  .nav-drawer{top:56px}
+  .hero{padding:5.5rem 1rem 3rem}
+  .hero-title{font-size:clamp(1.9rem,9vw,2.8rem)}
+  .hero-sub{font-size:.88rem}
+  .hero-btns{flex-direction:column;align-items:stretch;width:100%;max-width:320px;gap:.7rem}
+  .btn-p,.btn-s{padding:.9rem 1.5rem;font-size:.9rem;width:100%;text-align:center}
+  .stats{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:100%;border-radius:14px;overflow:hidden}
+  .stat{border-right:none;border-bottom:1px solid var(--border);padding:.9rem .75rem}
+  .stat:nth-child(odd){border-right:1px solid var(--border)}
+  .stat:nth-last-child(-n+2){border-bottom:none}
+  .snum{font-size:1.05rem;white-space:normal}
+  .slbl{font-size:.6rem}
+  .sec{padding:3.5rem 1rem}
+  .stitle{font-size:1.5rem}
+  .about-grid{gap:1rem}
+  .acard{padding:1.4rem}
+  .sgrid,.pgrid{grid-template-columns:1fr}
+  .curriculum-grid{grid-template-columns:1fr 1fr}
+  .course-wrap{padding:1.2rem 1rem;border-radius:16px}
+  .course-highlights{grid-template-columns:1fr}
+  .ecard{padding:1.2rem 1rem}
+  .ehdr{flex-direction:column;gap:.35rem}
+  .cwrap{grid-template-columns:1fr;gap:1rem}
+  .cinfo{padding:1.4rem}
+  .cinfo h3{font-size:1.2rem}
+  footer{padding:1rem}
+  .who-faq-grid{grid-template-columns:1fr !important}
+}
+@supports(padding:max(0px)){
+  nav{padding-left:max(1.25rem,env(safe-area-inset-left));padding-right:max(1.25rem,env(safe-area-inset-right))}
+  footer{padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.2rem,env(safe-area-inset-bottom))}
+}
+@media(hover:none){
+  .card:hover,.btn-p:hover,.btn-s:hover,.clink:hover,.cur-card:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="bg-wrap"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="toast" id="toast"></div>
+
+<nav>
+  <button class="nav-logo" onclick="goTo('hero')">Sibatsya <span>Sahoo</span></button>
+  <ul class="nav-links">
+    <li><button class="nbtn" onclick="goTo('about')">About</button></li>
+    <li><button class="nbtn" onclick="goTo('skills')">Skills</button></li>
+    <li><button class="nbtn" onclick="goTo('experience')">Experience</button></li>
+    <li><button class="nbtn" onclick="goTo('projects')">Projects</button></li>
+    <li><button class="nbtn ncourse" onclick="goTo('course')">Course</button></li>
+    <li><button class="nbtn ncta" onclick="goTo('contact')">Contact</button></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nbtn" onclick="navTo('about')">About</button>
+  <button class="nbtn" onclick="navTo('skills')">Skills</button>
+  <button class="nbtn" onclick="navTo('experience')">Experience</button>
+  <button class="nbtn" onclick="navTo('projects')">Projects</button>
+  <button class="nbtn ncourse" onclick="navTo('course')">Course</button>
+  <button class="nbtn ncta" onclick="navTo('contact')">Contact</button>
+</div>
+
+<section id="hero" class="hero">
+  <h1 class="hero-title">Sibatsya Sahoo<br/><span class="grad">SAP ABAP Consultant</span></h1>
+  <p class="hero-sub">4+ years of experience in S/4HANA, RAP, OData, CDS Views, and SAP BTP. Building scalable enterprise automation solutions for finance and sales processes.</p>
+  <div class="hero-btns">
+    <button class="btn-p" onclick="goTo('experience')">View My Experience</button>
+    <button class="btn-s" onclick="goTo('contact')">Get In Touch</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="snum">4+</div><div class="slbl">Years Exp.</div></div>
+    <div class="stat"><div class="snum">S/4HANA</div><div class="slbl">Expert</div></div>
+    <div class="stat"><div class="snum">OData</div><div class="slbl">Specialist</div></div>
+    <div class="stat"><div class="snum">RAP</div><div class="slbl">Experienced</div></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="stag rv">About Me</div>
+  <h2 class="stitle rv">S/4HANA ABAP Consultant focused on enterprise automation</h2>
+  <div class="about-grid">
+    <div class="card acard rv d1">
+      <p>I'm a <strong>SAP ABAP Consultant with 4 years of experience</strong> in S/4HANA, ABAP on HANA, RAP (RESTful ABAP Programming Model), OData services, and SAP BTP. I specialise in designing scalable enterprise solutions using CDS Views, Fiori Elements, and Object-Oriented ABAP.</p>
+      <p>Strong expertise in <strong>Classical ABAP (RICEF), performance optimization</strong>, and enterprise automation. Currently working on <strong>Accounts Payable Automation (APA)</strong> and <strong>Sales Order Automation (SOA)</strong> at Incture Technologies.</p>
+      <p>Passionate about converting complex functional requirements into <strong>robust, maintainable technical designs</strong> that deliver real business value.</p>
+    </div>
+    <div class="adetails rv d2">
+      <div class="drow"><span class="dk">Location</span><span class="dv">India</span></div>
+      <div class="drow"><span class="dk">Experience</span><span class="dv">4 Years</span></div>
+      <div class="drow"><span class="dk">Current Role</span><span class="dv">SAP ABAP Consultant</span></div>
+      <div class="drow"><span class="dk">Company</span><span class="dv">Incture Technologies</span></div>
+      <div class="drow"><span class="dk">Platforms</span><span class="dv">S/4HANA - ECC - BTP</span></div>
+      <div class="drow"><span class="dk">Email</span><span class="dv"><a href="mailto:sibatsya74@gmail.com" style="color:var(--indigo);text-decoration:none">sibatsya74@gmail.com</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <div class="stag rv">Technical Skills</div>
+  <h2 class="stitle rv">A full-spectrum SAP toolkit</h2>
+  <p class="ssub rv">From classical ABAP to modern S/4HANA development and SAP BTP.</p>
+  <div class="sgrid">
+    <div class="card scard rv d1"><div class="sicon">&#128640;</div><div class="sctitle">ABAP on HANA &amp; RAP</div><div class="tags"><span class="tag">CDS Views</span><span class="tag">RAP Managed BO</span><span class="tag">RAP Unmanaged BO</span><span class="tag">Performance Tuning</span><span class="tag">Parallel Processing</span></div></div>
+    <div class="card scard rv d2"><div class="sicon">&#127760;</div><div class="sctitle">OData &amp; Fiori</div><div class="tags"><span class="tag">OData V2</span><span class="tag">OData V4</span><span class="tag">Service Associations</span><span class="tag">DPC Enhancements</span><span class="tag">Fiori Elements</span><span class="tag">SAP Gateway</span></div></div>
+    <div class="card scard rv d3"><div class="sicon">&#9881;</div><div class="sctitle">Classical ABAP (RICEF)</div><div class="tags"><span class="tag">Reports</span><span class="tag">Interfaces</span><span class="tag">Conversions</span><span class="tag">Enhancements</span><span class="tag">BDC</span><span class="tag">SmartForms</span></div></div>
+    <div class="card scard rv d1"><div class="sicon">&#127959;</div><div class="sctitle">OO ABAP &amp; Design</div><div class="tags"><span class="tag">OO ABAP</span><span class="tag">Classes &amp; Interfaces</span><span class="tag">Modularization</span><span class="tag">ABAP Unit Tests</span><span class="tag">BAPI</span></div></div>
+    <div class="card scard rv d2"><div class="sicon">&#9729;</div><div class="sctitle">SAP Platforms</div><div class="tags"><span class="tag">SAP BTP Steampunk</span><span class="tag">SAP S/4HANA</span><span class="tag">SAP ECC</span><span class="tag">SRM-ECC Integration</span></div></div>
+    <div class="card scard rv d3"><div class="sicon">&#128296;</div><div class="sctitle">Tools &amp; Debugging</div><div class="tags"><span class="tag">ADT Eclipse</span><span class="tag">ST12</span><span class="tag">SE30 Runtime</span><span class="tag">ATC</span><span class="tag">SMW01-03</span><span class="tag">ServiceNow</span></div></div>
+  </div>
+</section>
+
+<section class="sec" id="experience">
+  <div class="stag rv">Work History</div>
+  <h2 class="stitle rv">Professional Experience</h2>
+  <p class="ssub rv">Delivering enterprise SAP solutions across automation, integration, and modern ABAP development.</p>
+  <div class="elist">
+    <div class="card ecard rv">
+      <div class="ehdr"><div><div class="etitle">SAP ABAP Consultant</div><div class="eco">Incture Technologies - Full-time</div></div><div class="eperiod">Oct 2025 - Present</div></div>
+      <ul class="ebullets">
+        <li>Working on Accounts Payable Automation (APA) to automate invoice processing and vendor payment workflows.</li>
+        <li>Developed CDS Views and OData Services for efficient data access and integration with automation platforms.</li>
+        <li>Designed ABAP programs and enhancements supporting automated invoice validation and posting.</li>
+        <li>Implemented Sales Order Automation (SOA) to reduce manual order creation and improve processing efficiency.</li>
+        <li>Built ABAP enhancements and APIs for automated sales order lifecycle management.</li>
+        <li>Collaborated with functional teams to translate business requirements into technical ABAP solutions.</li>
+      </ul>
+      <div class="tags"><span class="tag">APA</span><span class="tag">SOA</span><span class="tag">CDS Views</span><span class="tag">OData</span><span class="tag">S/4HANA</span></div>
+    </div>
+    <div class="card ecard rv">
+      <div class="ehdr"><div><div class="etitle">SAP ABAP Consultant</div><div class="eco">Signiwis Technologies Pvt. Ltd - Full-time</div></div><div class="eperiod">May 2022 - Oct 2025</div></div>
+      <ul class="ebullets">
+        <li>Developed RAP-based Application Job in SAP BTP to automatically lock inactive users.</li>
+        <li>Built Fiori Elements applications using RAP for monitoring business users with role-based authorization.</li>
+        <li>Created Business Role Assignment Utility to automate role management for admin-level security.</li>
+        <li>Developed parameterized CDS Views for dynamic sales order reporting.</li>
+        <li>Created OData Services to fetch shipping details using associations and DPC enhancements.</li>
+        <li>Implemented BADI LE_SHP_DELIVERY_PROC to control delivery deletion in VL02N.</li>
+        <li>Optimized ABAP programs using parallel processing for large dataset handling.</li>
+        <li>Developed ABAP Unit Test classes improving code reliability and maintainability.</li>
+        <li>Resolved SRM-ECC integration issues including BDoc errors using SMW01/02/03 and R3AS.</li>
+      </ul>
+      <div class="tags"><span class="tag">RAP</span><span class="tag">SAP BTP</span><span class="tag">Fiori Elements</span><span class="tag">CDS Views</span><span class="tag">OData</span><span class="tag">ABAP Unit Tests</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects">
+  <div class="stag rv">Key Projects</div>
+  <h2 class="stitle rv">Automation-Driven Projects</h2>
+  <p class="ssub rv">Real enterprise solutions built to streamline financial and operational SAP processes.</p>
+  <div class="pgrid">
+    <div class="card pcard rv d1"><div class="pnum">PROJECT 01</div><div class="ptitle">Accounts Payable Automation</div><div class="pdesc">End-to-end automation of invoice processing and vendor payment workflows. Built OData services and CDS Views integrating with automation platforms.</div><div class="tags"><span class="tag">CDS Views</span><span class="tag">OData</span><span class="tag">S/4HANA</span></div><div class="parrow">-&gt;</div></div>
+    <div class="card pcard rv d2"><div class="pnum">PROJECT 02</div><div class="ptitle">Sales Order Automation</div><div class="pdesc">ABAP enhancements and APIs powering automated sales order lifecycle management from creation to fulfilment, reducing manual effort.</div><div class="tags"><span class="tag">ABAP APIs</span><span class="tag">Enhancements</span><span class="tag">S/4HANA</span></div><div class="parrow">-&gt;</div></div>
+    <div class="card pcard rv d3"><div class="pnum">PROJECT 03</div><div class="ptitle">RAP User Monitoring App</div><div class="pdesc">RAP-based Application Job on SAP BTP that auto-locks inactive users. Fiori Elements app for real-time user monitoring with role-based authorization.</div><div class="tags"><span class="tag">RAP</span><span class="tag">SAP BTP</span><span class="tag">Fiori Elements</span></div><div class="parrow">-&gt;</div></div>
+  </div>
+</section>
+
+<section class="sec" id="course">
+  <div class="stag rv">New Course</div>
+  <h2 class="stitle rv">SAP ABAP Complete Course</h2>
+  <p class="ssub rv">From zero to professional ABAP developer - taught by a real SAP consultant with 4+ years of live project experience.</p>
+  <div class="course-wrap rv">
+    <div class="course-top">
+      <div>
+        <div class="course-badge">Launching Soon</div>
+        <div class="course-title-text">Master SAP ABAP -<br/><span class="grad">From Zero to S/4HANA</span></div>
+        <p class="course-desc">A complete, beginner-friendly SAP ABAP course taught by a developer with 4+ years of real-world project experience. No prior SAP or programming knowledge required.</p>
+        <div class="course-highlights">
+          <div class="ch"><div class="ch-tick">v</div><span>Taught by a <strong>real SAP ABAP developer</strong> - live project experience</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Live coding</strong> inside a real SAP system for every concept</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>28 modules</strong> - most complete Core ABAP curriculum</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Hands-on exercise</strong> at the end of every module</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Capstone project</strong> - build a real ABAP app</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Performance tuning</strong> - junior to senior level</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Free SAP trial system</strong> - setup guide included</span></div>
+          <div class="ch"><div class="ch-tick">v</div><span><strong>Lifetime access</strong> - learn at your own pace</span></div>
+        </div>
+        <div class="cstats">
+          <div class="cstat"><div class="csnum">28</div><div class="cslbl">Modules</div></div>
+          <div class="cstat"><div class="csnum">45h</div><div class="cslbl">Video</div></div>
+          <div class="cstat"><div class="csnum">Zero</div><div class="cslbl">Prereqs</div></div>
+          <div class="cstat"><div class="csnum">inf</div><div class="cslbl">Access</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="cc-ribbon">Coming Soon</div>
+        <div class="cc">
+          <div class="cc-header"><div class="cc-avatar">SS</div><div><div class="cc-name">Sibatsya Sahoo</div><div class="cc-role">SAP ABAP Consultant - Instructor</div></div></div>
+          <div class="cc-mods">
+            <div class="cc-mod"><span class="cc-mod-icon">&#128216;</span><span class="cc-mod-label">Classical ABAP Fundamentals</span><div class="cc-mod-bar"><div class="cc-mod-fill" style="width:100%"></div></div></div>
+            <div class="cc-mod"><span class="cc-mod-icon">&#127959;</span><span class="cc-mod-label">OO ABAP &amp; Clean Code</span><div class="cc-mod-bar"><div class="cc-mod-fill" style="width:88%"></div></div></div>
+            <div class="cc-mod"><span class="cc-mod-icon">&#128640;</span><span class="cc-mod-label">CDS Views &amp; HANA</span><div class="cc-mod-bar"><div class="cc-mod-fill" style="width:78%"></div></div></div>
+            <div class="cc-mod"><span class="cc-mod-icon">&#127760;</span><span class="cc-mod-label">OData &amp; Fiori Elements</span><div class="cc-mod-bar"><div class="cc-mod-fill" style="width:72%"></div></div></div>
+            <div class="cc-mod"><span class="cc-mod-icon">&#9729;</span><span class="cc-mod-label">RAP &amp; SAP BTP</span><div class="cc-mod-bar"><div class="cc-mod-fill" style="width:62%"></div></div></div>
+          </div>
+          <div class="cc-footer">
+            <div class="ccf-stat"><div class="ccf-num">28</div><div class="ccf-lbl">Modules</div></div>
+            <div class="ccf-stat"><div class="ccf-num">45h+</div><div class="ccf-lbl">Content</div></div>
+            <div class="ccf-stat"><div class="ccf-num">Free</div><div class="ccf-lbl">Preview</div></div>
+            <div class="ccf-stat"><div class="ccf-num">Inf</div><div class="ccf-lbl">Access</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">Complete Curriculum - 28 Modules</div>
+      <p style="font-size:.77rem;color:var(--muted);margin-bottom:.75rem">Every module includes live SAP demos, written exercises, and practical assignments.</p>
+      <div class="curriculum-grid">
+        <div class="cur-card"><div class="cur-num">MODULE 01</div><div class="cur-title">SAP GUI &amp; ABAP Workbench Navigation</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 02</div><div class="cur-title">ABAP Basics - Data Types, Variables &amp; Operators</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 03</div><div class="cur-title">Control Logic - IF, CASE &amp; Loops</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 04</div><div class="cur-title">Internal Tables - Standard, Sorted &amp; Hashed</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 05</div><div class="cur-title">Open SQL - SELECT, INSERT, UPDATE, DELETE</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 06</div><div class="cur-title">Classical Reports &amp; ALV Grid (FM + OOP)</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 07</div><div class="cur-title">SAP Script, Smart Forms &amp; Adobe PDF Forms</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 08</div><div class="cur-title">Dialog Programs &amp; Screen Painter</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 09</div><div class="cur-title">CDS Views &amp; ABAP on HANA</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 10</div><div class="cur-title">OO ABAP - Classes, Interfaces &amp; Events</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 11</div><div class="cur-title">Enhancements - User Exits, BADIs &amp; Framework</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 12</div><div class="cur-title">BDC - CALL TRANSACTION &amp; Session Method</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 13</div><div class="cur-title">LSMW - All 4 Legacy Data Migration Methods</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 14</div><div class="cur-title">BAPIs - Call &amp; Create for Business Transactions</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 15</div><div class="cur-title">RFC - Remote Function Calls for Integration</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 16</div><div class="cur-title">IDocs - Inbound &amp; Outbound ALE/EDI</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 17</div><div class="cur-title">File Handling - CSV/Excel Upload &amp; App Server</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 18</div><div class="cur-title">Lock Objects, Message Classes &amp; Auth Checks</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 19</div><div class="cur-title">Performance Tuning — SQL &amp; ABAP Techniques</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 20</div><div class="cur-title">ABAP Debugger — Advanced Techniques</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 21</div><div class="cur-title">ATC &amp; Code Inspector — Clean Code Standards</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 22</div><div class="cur-title">ALV — Advanced OOP Grid &amp; Tree</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 23</div><div class="cur-title">Workflow &amp; Business Workplace Integration</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 24</div><div class="cur-title">Adobe Forms &amp; Interactive PDFs</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 25</div><div class="cur-title">Web Dynpro ABAP Basics</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 26</div><div class="cur-title">Transport Management &amp; Best Practices</div></div>
+        <div class="cur-card"><div class="cur-num">MODULE 27</div><div class="cur-title">Interview Prep — Top ABAP Questions</div></div>
+        <div class="cur-card" style="border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.04)"><div class="cur-num" style="color:#fbbf24">MODULE 28</div><div class="cur-title">Capstone Project — Build a Real ABAP App</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="who-faq-grid rv" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem">
+    <div class="card" style="padding:2rem;border-radius:20px">
+      <div style="font-size:.88rem;font-weight:700;margin-bottom:1rem;color:var(--ink)">Who Is This Course For?</div>
+      <div style="display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.3rem">
+        <div class="ch"><div class="ch-tick">v</div>Fresh graduates wanting to enter SAP</div>
+        <div class="ch"><div class="ch-tick">v</div>IT professionals switching to SAP ABAP</div>
+        <div class="ch"><div class="ch-tick">v</div>Functional consultants who want to understand the technical side</div>
+        <div class="ch"><div class="ch-tick">v</div>ABAP developers who want to fill knowledge gaps</div>
+        <div class="ch"><div class="ch-tick">v</div>Anyone who wants to learn ABAP from scratch</div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:1rem">
+        <div style="font-size:.82rem;font-weight:700;margin-bottom:.5rem;color:var(--ink)">Requirements</div>
+        <div style="font-size:.79rem;color:var(--muted);line-height:1.8">
+          A computer with internet connection<br/>
+          SAP GUI or free trial system (setup guide included)<br/>
+          Basic computer skills - no coding or SAP experience needed<br/>
+          Commitment to practice - ABAP is mastered by writing code
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:.88rem;font-weight:700;margin-bottom:.75rem;color:var(--ink)">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">I have never coded before. Can I still do this?<span class="faq-icon">+</span></div><div class="faq-a">Yes, absolutely. Module 1 assumes zero programming knowledge. Students with no coding background have successfully completed this course.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long will it take to complete?<span class="faq-icon">+</span></div><div class="faq-a">Approximately 45 hours of video content. At 1 hour per day, you can complete it in 6-8 weeks. You have lifetime access - go at your own pace.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does this course cover S/4HANA?<span class="faq-icon">+</span></div><div class="faq-a">This is a Core ABAP course. All concepts apply to both SAP ECC and S/4HANA. S/4HANA-specific topics like CDS Views and AMDP are introduced in Module 9.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I am stuck or have a question?<span class="faq-icon">+</span></div><div class="faq-a">Every lecture has a Q&amp;A section. Post your question and the instructor will respond. You are never learning alone.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="stag rv">Get In Touch</div>
+  <h2 class="stitle rv">Let's connect</h2>
+  <div class="cwrap">
+    <div class="card cinfo rv d1">
+      <h3>Get In Touch</h3>
+      <p>I'm a SAP ABAP Consultant open to connecting with fellow professionals, companies, and students. Also launching a complete SAP ABAP course - feel free to reach out.</p>
+      <a class="clink" href="mailto:sibatsya74@gmail.com">
+        <div class="cico"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <span>sibatsya74@gmail.com</span>
+        <span class="carr">-&gt;</span>
+      </a>
+      <a class="clink" href="https://www.linkedin.com/in/sibatsya-sahoo" target="_blank" rel="noopener">
+        <div class="cico" style="font-size:.7rem;font-weight:800">in</div>
+        <span>linkedin.com/in/sibatsya-sahoo</span>
+        <span class="carr">-&gt;</span>
+      </a>
+    </div>
+    <div class="card rv d2" style="padding:2.4rem;border-radius:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.2rem">
+      <div style="font-size:3.5rem">&#127891;</div>
+      <div style="font-size:1.2rem;font-weight:800;letter-spacing:-.02em;color:var(--ink)">SAP ABAP Course - Launching Soon</div>
+      <p style="font-size:.88rem;color:var(--muted);line-height:1.75;max-width:300px">28 modules - 45+ hours - Beginner friendly - Lifetime access.</p>
+      <button class="btn-p" onclick="goTo('course')" style="font-size:.85rem;padding:.75rem 1.75rem">View Course Details</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fn">© 2026 Sibatsya Sahoo - SAP ABAP Consultant &amp; Instructor</div>
+  <div class="fc">All rights reserved</div>
+</footer>
+
+<script>
+function goTo(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+function toggleMenu(){var h=document.getElementById('hamburger');var d=document.getElementById('navDrawer');var open=d.classList.contains('open');if(open){d.classList.remove('open');h.classList.remove('open');}else{d.classList.add('open');h.classList.add('open');}}
+function navTo(id){var h=document.getElementById('hamburger');var d=document.getElementById('navDrawer');d.classList.remove('open');h.classList.remove('open');setTimeout(function(){goTo(id);},60);}
+function toggleFaq(el){var item=el.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');}
+var sids=['about','skills','experience','projects','course','contact'];
+var nbs=document.querySelectorAll('.nav-links .nbtn:not(.ncta):not(.ncourse)');
+window.addEventListener('scroll',function(){var scrollY=window.scrollY+100;var active=-1;sids.forEach(function(id,i){var el=document.getElementById(id);if(el&&el.offsetTop<=scrollY)active=i;});nbs.forEach(function(btn,i){btn.classList.toggle('active',i===active);});});
+document.addEventListener('click',function(e){var d=document.getElementById('navDrawer');var h=document.getElementById('hamburger');if(d&&d.classList.contains('open')&&!d.contains(e.target)&&!h.contains(e.target)){d.classList.remove('open');h.classList.remove('open');}});
+</script></body>
+</html>
